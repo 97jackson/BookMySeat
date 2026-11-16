@@ -1,0 +1,115 @@
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# ==============================
+# Virtual Environments
+# ==============================
+venv/
+env/
+.venv/
+ENV/
+.virtualenv/
+
+# ==============================
+# Django
+# ==============================
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media and Static Files
+media/
+staticfiles/
+static_root/
+
+# ==============================
+# Environment Variables
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# Testing & Coverage
+# ==============================
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+nosetests.xml
+
+# ==============================
+# Migrations
+# ==============================
+# Usually keep Django migrations tracked.
+# Uncomment only if you intentionally want to ignore them.
+# */migrations/__pycache__/
+
+# ==============================
+# IDEs & Editors
+# ==============================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ==============================
+# Jupyter Notebook
+# ==============================
+.ipynb_checkpoints/
+
+# ==============================
+# Build & Distribution
+# ==============================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ==============================
+# OS Generated Files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Type Checking & Linters
+# ==============================
+.mypy_cache/
+.dmypy.json
+.pyright/
+.ruff_cache/
+
+# ==============================
+# Celery
+# ==============================
+celerybeat-schedule
+celerybeat.pid
+
+# ==============================
+# Logs
+# ==============================
+logs/
+*.log.*
+
+# ==============================
+# Temporary Files
+# ==============================
+*.tmp
+*.bak
+*.orig
+temp/
+tmp/
