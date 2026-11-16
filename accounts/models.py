@@ -15,6 +15,9 @@ phone_validator = RegexValidator(
 class UserManager(BaseUserManager):
     use_in_migrations = True
 
+    def get_by_natural_key(self, username):
+        return self.get(email__iexact=username)
+
     def create_user(self, email, password=None, **extra_fields):
         if not email:
             raise ValueError("Email is required.")
@@ -25,6 +28,8 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password=None, **extra_fields):
+        if not password:
+            raise ValueError("Superuser must have a password.")
         extra_fields["role"] = self.model.UserRole.SUPER_ADMIN
         extra_fields["email_verified_at"] = timezone.now()
         return self.create_user(email, password, **extra_fields)
