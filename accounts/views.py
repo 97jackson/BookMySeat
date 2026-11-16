@@ -4,5 +4,5 @@ from rest_framework.permissions import AllowAny
 from accounts.serializers import RegisterSerializer
 
 class RegisterView(generics.CreateAPIView):
-    serializer = RegisterSerializer
+    serializer_class = RegisterSerializer
     permission_classes = [AllowAny]
