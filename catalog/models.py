@@ -97,6 +97,9 @@ class Show(BaseModel):
 
     movie = models.ForeignKey(Movie, on_delete=models.PROTECT, related_name="shows")
     screen = models.ForeignKey(Screen, on_delete=models.PROTECT, related_name="shows")
+    # Type-only hints for FK id attributes Django adds at runtime.
+    movie_id: int
+    screen_id: int
     starts_at = models.DateTimeField()
     ends_at = models.DateTimeField()
     status = models.CharField(
