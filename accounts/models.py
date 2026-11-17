@@ -2,6 +2,8 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.core.validators import RegexValidator
 from django.db import models
 from django.utils import timezone
+from typing import ClassVar
+
 
 from core.models import BaseModel
 
@@ -55,7 +57,7 @@ class User(AbstractBaseUser, BaseModel):
     email_verified_at = models.DateTimeField(null=True, blank=True)
     phone_verified_at = models.DateTimeField(null=True, blank=True)
 
-    objects = UserManager()
+    objects: ClassVar[UserManager] = UserManager() # pyright: ignore[reportIncompatibleVariableOverride]
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["first_name"]
