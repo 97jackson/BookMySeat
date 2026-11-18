@@ -199,3 +199,8 @@ SIMPLE_JWT = {
     "USER_ID_CLAIM": "user_id",
     "CHECK_REVOKE_TOKEN": True,
 }
+
+import sys
+
+if "test" in sys.argv:
+    PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]

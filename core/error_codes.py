@@ -15,3 +15,4 @@ class ErrorCode(StrEnum):
     # Booking
     SOLD_OUT = "sold_out"
     HOLD_EXPIRED = "hold_expired"
+    SEATS_UNAVAILABLE = "seats_unavailable"
