@@ -1,6 +1,10 @@
+from datetime import datetime
+
 from django.db import models
 from django.db.models import F, Q
+from django.utils import timezone
 
+from catalog.constants import LATE_BOOKING_WINDOW
 from core.models import BaseModel
 
 
@@ -90,10 +94,22 @@ class Seat(BaseModel):
         return f"{self.row}{self.number}"
 
 
+class ShowQuerySet(models.QuerySet):
+    def bookable(self, now: datetime | None = None) -> "ShowQuerySet":
+        """Scheduled shows that haven't passed the late-booking cutoff."""
+        now = now or timezone.now()
+        return self.filter(
+            status=Show.Status.SCHEDULED,
+            starts_at__gt=now - LATE_BOOKING_WINDOW,
+        )
+
+
 class Show(BaseModel):
     class Status(models.TextChoices):
         SCHEDULED = "scheduled", "Scheduled"
         CANCELLED = "cancelled", "Cancelled"
+
+    objects = ShowQuerySet.as_manager()
 
     movie = models.ForeignKey(Movie, on_delete=models.PROTECT, related_name="shows")
     screen = models.ForeignKey(Screen, on_delete=models.PROTECT, related_name="shows")

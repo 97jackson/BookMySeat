@@ -7,12 +7,12 @@ from rest_framework.exceptions import ValidationError
 
 from accounts.models import User
 from bookings.models import ShowSeat, ShowSeatStatus
+from catalog.constants import LATE_BOOKING_WINDOW
 from catalog.models import Show
 from core.error_codes import ErrorCode
 from core.exceptions import ConflictError
 
 MAX_SEATS_PER_HOLD = 10
-LATE_BOOKING_WINDOW = timedelta(minutes=15)
 HOLD_DURATION = timedelta(minutes=10)
 
 
