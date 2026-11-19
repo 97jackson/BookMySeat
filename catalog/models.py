@@ -44,6 +44,10 @@ class Movie(BaseModel):
     language = models.CharField(max_length=50)
     certificate = models.CharField(max_length=4, choices=Certificate.choices)
     release_date = models.DateField()
+    synopsis = models.TextField(blank=True)
+    director = models.CharField(max_length=200, blank=True)
+    cast = models.JSONField(default=list, blank=True)  # list of names
+    genres = models.JSONField(default=list, blank=True)  # list of strings
 
     def __str__(self) -> str:
         return self.title

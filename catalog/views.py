@@ -21,7 +21,7 @@ class MovieListView(generics.ListAPIView):
     permission_classes = [AllowAny]
     serializer_class = MovieListSerializer
 
-    def get_queryset(self):
+    def get_queryset(self): 
         slug = self.request.query_params.get("city", "").strip()
         if not slug:
             raise ValidationError({"city": "This field is required."})
@@ -35,4 +35,4 @@ class MovieListView(generics.ListAPIView):
         showing = Show.objects.bookable().filter(screen__cinema__city=city)
         return Movie.objects.filter(id__in=showing.values("movie_id")).order_by(
             "-release_date", "title"
-        )
+        ) 

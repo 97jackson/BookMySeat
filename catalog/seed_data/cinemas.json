@@ -1,0 +1,130 @@
+{
+  "cities": [
+    {
+      "name": "Trivandrum",
+      "state": "Kerala",
+      "slug": "trivandrum-kerala",
+      "cinemas": [
+        {
+          "name": "Neelakurinji Cinemas",
+          "address": "18 Plamoodu Road, Pattom, Thiruvananthapuram, Kerala 695004",
+          "latitude": 8.526200,
+          "longitude": 76.941900,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        },
+        {
+          "name": "Thumbapoo Talkies",
+          "address": "NH 66 Bypass, near Technopark Phase 1, Kazhakkoottam, Thiruvananthapuram, Kerala 695582",
+          "latitude": 8.558300,
+          "longitude": 76.881300,
+          "screens": ["Screen 1", "Screen 2"]
+        }
+      ]
+    },
+    {
+      "name": "Kochi",
+      "state": "Kerala",
+      "slug": "kochi-kerala",
+      "cinemas": [
+        {
+          "name": "Harbourlight Cinemas",
+          "address": "42 Shanmugham Road, Marine Drive, Ernakulam, Kochi, Kerala 682031",
+          "latitude": 9.978600,
+          "longitude": 76.277300,
+          "screens": ["Screen 1", "Screen 2"]
+        },
+        {
+          "name": "Kayal Screens",
+          "address": "Palarivattom-Edappally Road, Edappally, Kochi, Kerala 682024",
+          "latitude": 10.023600,
+          "longitude": 76.308700,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        }
+      ]
+    },
+    {
+      "name": "Bengaluru",
+      "state": "Karnataka",
+      "slug": "bengaluru-karnataka",
+      "cinemas": [
+        {
+          "name": "Gulmohar Picture House",
+          "address": "27 11th Main Road, 4th Block, Jayanagar, Bengaluru, Karnataka 560011",
+          "latitude": 12.927900,
+          "longitude": 77.582600,
+          "screens": ["Screen 1", "Screen 2"]
+        },
+        {
+          "name": "Silicon Skyline Cinemas",
+          "address": "ITPL Main Road, Whitefield, Bengaluru, Karnataka 560066",
+          "latitude": 12.985500,
+          "longitude": 77.731000,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        }
+      ]
+    },
+    {
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "slug": "chennai-tamil-nadu",
+      "cinemas": [
+        {
+          "name": "Marina Lights Cinemas",
+          "address": "61 Lattice Bridge Road, Adyar, Chennai, Tamil Nadu 600020",
+          "latitude": 13.006300,
+          "longitude": 80.257500,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        },
+        {
+          "name": "Kolam Screens",
+          "address": "2nd Avenue, Anna Nagar, Chennai, Tamil Nadu 600040",
+          "latitude": 13.086800,
+          "longitude": 80.210100,
+          "screens": ["Screen 1", "Screen 2"]
+        }
+      ]
+    },
+    {
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "slug": "hyderabad-telangana",
+      "cinemas": [
+        {
+          "name": "Deccan Lantern Cinemas",
+          "address": "Road No. 12, Banjara Hills, Hyderabad, Telangana 500034",
+          "latitude": 17.412600,
+          "longitude": 78.438200,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        },
+        {
+          "name": "Pearl City Screens",
+          "address": "Old Mumbai Highway, Gachibowli, Hyderabad, Telangana 500032",
+          "latitude": 17.440100,
+          "longitude": 78.348900,
+          "screens": ["Screen 1", "Screen 2"]
+        }
+      ]
+    },
+    {
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "slug": "mumbai-maharashtra",
+      "cinemas": [
+        {
+          "name": "Seaface Picture House",
+          "address": "Hill Road, Bandra West, Mumbai, Maharashtra 400050",
+          "latitude": 19.054400,
+          "longitude": 72.833100,
+          "screens": ["Screen 1", "Screen 2"]
+        },
+        {
+          "name": "Monsoon Marquee Cinemas",
+          "address": "New Link Road, Andheri West, Mumbai, Maharashtra 400053",
+          "latitude": 19.136500,
+          "longitude": 72.829600,
+          "screens": ["Screen 1", "Screen 2", "Screen 3"]
+        }
+      ]
+    }
+  ]
+}
